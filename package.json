@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/redshot/react-boilerplate#readme",
   "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
     "webpack": "^5.4.0",
     "webpack-cli": "^4.2.0"
   }
