@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "adrianb",
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/redshot/react-boilerplate/issues"
   },
-  "homepage": "https://github.com/redshot/react-boilerplate#readme"
+  "homepage": "https://github.com/redshot/react-boilerplate#readme",
+  "devDependencies": {
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
+  }
 }
