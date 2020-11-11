@@ -30,3 +30,5 @@ module.exports = {
 // module property takes an object with rules property array that contains an object. each item in rules array can be an object
 // Without @babel/preset-react, npm run build will display an error because it does not know how to handle JSX. JSX is not a valid JavaScript
 // The HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bundles.
+// Our webpack configuration is composed of 3 files so we have 1 place where we put all share settings. 
+//  Additionally, we have separate file where we can only pud dev mode settings or production mode setting
