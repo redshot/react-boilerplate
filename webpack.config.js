@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
 	entry: './src/index.js',
@@ -17,7 +18,10 @@ module.exports = {
         }
       }
     ]
-  }	
+  },
+  plugins: [new HtmlWebpackPlugin({
+    template: './src/index.html'
+  })]
 }
 
 // Set module.exports and output property to an object
@@ -25,3 +29,4 @@ module.exports = {
 // development is unminified while producttion mode is minified. if there is no mode indicated webpack will minify it
 // module property takes an object with rules property array that contains an object. each item in rules array can be an object
 // Without @babel/preset-react, npm run build will display an error because it does not know how to handle JSX. JSX is not a valid JavaScript
+// The HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bundles.
