@@ -17,6 +17,11 @@ module.exports = {
           presets: ['@babel/preset-env', '@babel/preset-react'],
           plugins: ['@babel/plugin-proposal-class-properties']
         }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+        exclude: /node_modules/
       }
     ]
   },
@@ -37,5 +42,8 @@ module.exports = {
  * npm i -D name-of-package save the package as devdependency
  * webpack-dev-server watches the files and will do the build in the dist folder then send the signal to the browser to reload the page
  * We need plugin-proposal-class-properties package to understand proposed javascript features syntax like state = { count: 0 }.
+ * test: /\.js$/ and test: /\.js$/ contains regular expression test for js and css extensions
+ * css-loader is gonna allow webpack to handle css syntax while style-loader is gonna take the css and inject the style tag into html runtime
+ * 
  * 
  */
