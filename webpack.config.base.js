@@ -14,7 +14,8 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-react']
+          presets: ['@babel/preset-env', '@babel/preset-react'],
+          plugins: ['@babel/plugin-proposal-class-properties']
         }
       }
     ]
@@ -35,5 +36,6 @@ module.exports = {
  *  Additionally, we have separate file where we can only pud dev mode settings or production mode setting
  * npm i -D name-of-package save the package as devdependency
  * webpack-dev-server watches the files and will do the build in the dist folder then send the signal to the browser to reload the page
+ * We need plugin-proposal-class-properties package to understand proposed javascript features syntax like state = { count: 0 }.
  * 
  */
