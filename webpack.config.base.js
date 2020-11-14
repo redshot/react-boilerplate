@@ -6,7 +6,7 @@ module.exports = {
 	output: {
 		path: path.join(__dirname, 'dist'),
 		filename: 'app.bundle.js'
-	},
+  }, 
   module: {
     rules: [
       {
@@ -32,3 +32,5 @@ module.exports = {
 // The HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bundles.
 // Our webpack configuration is composed of 3 files so we have 1 place where we put all share settings. 
 //  Additionally, we have separate file where we can only pud dev mode settings or production mode setting
+// npm i -D name-of-package save the package as devdependency
+// webpack-dev-server watches the files and will do the build in the dist folder then send the signal to the browser to reload the page
