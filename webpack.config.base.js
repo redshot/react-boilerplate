@@ -15,7 +15,10 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react'],
-          plugins: ['@babel/plugin-proposal-class-properties']
+          plugins: [
+            'react-hot-loader/babel',
+            '@babel/plugin-proposal-class-properties'
+          ]
         }
       },
       {
@@ -44,6 +47,6 @@ module.exports = {
  * We need plugin-proposal-class-properties package to understand proposed javascript features syntax like state = { count: 0 }.
  * test: /\.js$/ and test: /\.js$/ contains regular expression test for js and css extensions
  * css-loader is gonna allow webpack to handle css syntax while style-loader is gonna take the css and inject the style tag into html runtime
- * 
+ * react-hot-loader can update the part of the page without reloading the whole page
  * 
  */

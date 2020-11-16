@@ -1,1 +1,1 @@
-# React Boilerplate
+# Egghead React Boilerplate
