@@ -35,6 +35,7 @@ module.exports = {
 
 /**
  * Set module.exports and output property to an object
+ * The command to run the project in npm run dev or depending on the config in package.json
  * Webpack will automatically pickup the config file base on its name alone and decide the settings to how to output the bundle
  * development is unminified while producttion mode is minified. if there is no mode indicated webpack will minify it
  * module property takes an object with rules property array that contains an object. each item in rules array can be an object
