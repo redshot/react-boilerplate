@@ -26,7 +26,8 @@ module.exports = {
           }], '@babel/preset-react'],
           plugins: [
             'react-hot-loader/babel',
-            '@babel/plugin-proposal-class-properties'
+            '@babel/plugin-proposal-class-properties',
+            '@babel/plugin-syntax-dynamic-import'
           ]
         }
       },
@@ -66,6 +67,6 @@ module.exports = {
  *  Without any configuration, preset-env is gonna act like the preset for es2015, 2016, 2017 and 2018 but with specification we can target environments to customize the build(app bundle)
  *  targets:{} and useBuiltIns: 'entry' config is gonna control the polyfill that will be needed from core-js
  *  core-js is a collection of polyfills. A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it
- * 
+ * React.lazy and suspense allows us to asynchronously load modules only when we need it. By splitting our code, we can keep our initial bundle small on load
  *  
  */
