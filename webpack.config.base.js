@@ -12,24 +12,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/,
-        options: {
-          presets: [['@babel/preset-env', {
-            targets: [
-              'last 2 versions',
-              'not dead',
-              '> 0.2%',
-              'not ie 11'
-            ],
-            useBuiltIns: 'entry',
-            corejs: 3            
-          }], '@babel/preset-react'],
-          plugins: [
-            'react-hot-loader/babel',
-            '@babel/plugin-proposal-class-properties',
-            '@babel/plugin-syntax-dynamic-import'
-          ]
-        }
+        exclude: /node_modules/
       },
       {
         test: /\.css$/,
@@ -70,7 +53,8 @@ module.exports = {
  * React.lazy and suspense allows us to asynchronously load modules only when we need it. By splitting our code, we can keep our initial bundle small on load
  * Do not execute "npm test" in terminal with config "test": "jest" in Windows 10. It's not recommended.
  *  If you want to use jest command, replace "jest" with use "node_modules/.bin/jest"
- * 
+ * The jest test is gonna have a problem with JSX and it will say we don't have standard javascript and we need to transform the code order to test it.
+ *  By default, babel loader is gonna find .babelrc and use its options
  * 
  * 
  */
