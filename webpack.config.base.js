@@ -68,5 +68,9 @@ module.exports = {
  *  targets:{} and useBuiltIns: 'entry' config is gonna control the polyfill that will be needed from core-js
  *  core-js is a collection of polyfills. A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it
  * React.lazy and suspense allows us to asynchronously load modules only when we need it. By splitting our code, we can keep our initial bundle small on load
- *  
+ * Do not execute "npm test" in terminal with config "test": "jest" in Windows 10. It's not recommended.
+ *  If you want to use jest command, replace "jest" with use "node_modules/.bin/jest"
+ * 
+ * 
+ * 
  */
