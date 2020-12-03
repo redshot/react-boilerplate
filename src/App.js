@@ -1,33 +1,38 @@
 import React from 'react'
-import {hot} from 'react-hot-loader'
+import { hot } from 'react-hot-loader'
 
 const Warning = React.lazy(() => import('./Warning'))
 
 class App extends React.Component {
-	state = {
-		count: 0
-	}
+  state = {
+    count: 0,
+  }
 
-	render() {
+  render() {
+    const { count } = this.state
 
-		const {count} = this.state
-
-		return (
-			<div>
-				<h1 className={count > 10 ? 'warning' : null}>
-					Hello World!
-				</h1>
-				<h2>Count: {this.state.count}</h2>
-        <button onClick={() => this.setState(state => ({count: state.count + 1}))}>+</button>
-        <button onClick={() => this.setState(state => ({count: state.count - 1}))}>-</button>
-				{count > 10 ?
-					<React.Suspense fallback={null}>
-						<Warning />
-					</React.Suspense>
-				: null}
-			</div>
-		)
-	}
+    return (
+      <div>
+        <h1 className={count > 10 ? 'warning' : null}>Hello World!</h1>
+        <h2>Count: {this.state.count}</h2>
+        <button
+          onClick={() => this.setState((state) => ({ count: state.count + 1 }))}
+        >
+          +
+        </button>
+        <button
+          onClick={() => this.setState((state) => ({ count: state.count - 1 }))}
+        >
+          -
+        </button>
+        {count > 10 ? (
+          <React.Suspense fallback={null}>
+            <Warning />
+          </React.Suspense>
+        ) : null}
+      </div>
+    )
+  }
 }
 
 export default hot(module)(App)

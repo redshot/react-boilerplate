@@ -2,28 +2,30 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-	entry: './src/index.js',
-	output: {
-		path: path.join(__dirname, 'dist'),
-		filename: 'app.bundle.js'
-  }, 
+  entry: './src/index.js',
+  output: {
+    path: path.join(__dirname, 'dist'),
+    filename: 'app.bundle.js',
+  },
   module: {
     rules: [
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
-        exclude: /node_modules/
-      }
-    ]
+        exclude: /node_modules/,
+      },
+    ],
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: './src/index.html'
-  })]
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+  ],
 }
 
 /**
@@ -36,14 +38,14 @@ module.exports = {
  * Without @babel/preset-react, npm run build will display an error because it does not know how to handle JSX. JSX is not a valid JavaScript
  *  @babel/preset-env is a collection of babel plugins to transform modern JavaScript code, depending on the target browser we specify in the configuration.
  * The HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bundles.
- * Our webpack configuration is composed of 3 files so we have 1 place where we put all share settings. 
+ * Our webpack configuration is composed of 3 files so we have 1 place where we put all share settings.
  *  Additionally, we have separate file where we can only pud dev mode settings or production mode setting
  * webpack-dev-server watches the files and will do the build in the dist folder then send the signal to the browser to reload the page
  * We need plugin-proposal-class-properties package to understand proposed javascript features syntax like state = { count: 0 }.
  * test: /\.js$/ and test: /\.js$/ contains regular expression test for js and css extensions
  * css-loader is gonna allow webpack to handle css syntax while style-loader is gonna take the css and inject the style tag into html runtime
  * react-hot-loader can update the part of the page without reloading the whole page
- * As the app gets more complex, we will be able to keep an eye of the size of our bundle through webpack-bundle-analyzer 
+ * As the app gets more complex, we will be able to keep an eye of the size of our bundle through webpack-bundle-analyzer
  * @babel-polyfill is gonna handle features that are not available in older browsers.
  *  Polyfills can add to the size(Parsed size) of your app bundle
  *  A lot of newer browsers support new features so if we know the browsers that we are targeting, it will be nice to set the features that we only need base our target browsers
@@ -56,5 +58,5 @@ module.exports = {
  * The jest test is gonna have a problem with JSX and it will say we don't have standard javascript and we need to transform the code order to test it.
  *  By default, babel loader is gonna find .babelrc and use its options
  *
- * 
+ *
  */
