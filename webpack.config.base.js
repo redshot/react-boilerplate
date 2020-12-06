@@ -57,6 +57,8 @@ module.exports = {
  *  If you want to use jest command, replace "jest" with use "node_modules/.bin/jest"
  * The jest test is gonna have a problem with JSX and it will say we don't have standard javascript and we need to transform the code order to test it.
  *  By default, babel loader is gonna find .babelrc and use its options
+ * Eslint helps avoid common javascript errors. Enter "npm run lint" on terminal to execute eslint on project
+ * Eslint-plugin-jsx-a11y checks jsx for potential accessbility issues
  *
  *
  */
