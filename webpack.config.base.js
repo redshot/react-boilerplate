@@ -59,6 +59,7 @@ module.exports = {
  *  By default, babel loader is gonna find .babelrc and use its options
  * Eslint helps avoid common javascript errors. Enter "npm run lint" on terminal to execute eslint on project
  * Eslint-plugin-jsx-a11y checks jsx for potential accessbility issues
+ * Husky allows us to ensure that our code is formatted and well-tested before committing to git
  *
  *
  */
