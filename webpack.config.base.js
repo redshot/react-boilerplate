@@ -60,6 +60,8 @@ module.exports = {
  * Eslint helps avoid common javascript errors. Enter "npm run lint" on terminal to execute eslint on project
  * Eslint-plugin-jsx-a11y checks jsx for potential accessbility issues
  * Husky allows us to ensure that our code is formatted and well-tested before committing to git
+ * React strictmode is gonna give us warnings and anything that is deprecated(this might only happen in development mode)
+ *  - Will warn in the console
  *
  *
  */

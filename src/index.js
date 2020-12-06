@@ -5,7 +5,12 @@ import App from './App'
 import './styles.css'
 
 // put component into html page
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('app')
+)
 
 // Files in bin directory are executable
 // By default webpack is gonna create a dist directory, where output will go
