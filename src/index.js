@@ -5,11 +5,6 @@ import App from './App'
 import DefaultErrorBoundary from './DefaultErrorBoundary'
 import './styles.css'
 
-if (process.env.NODE_ENV === 'development') {
-  const axe = require('react-axe')
-  axe(React, ReactDOM, 1000)
-}
-
 // put component into html page
 ReactDOM.render(
   <React.StrictMode>
