@@ -63,5 +63,6 @@ module.exports = {
  * React strictmode is gonna give us warnings and anything that is deprecated(this might only happen in development mode)
  *  - Will warn in the console
  * DefaultErrorBoundary is a react component that will catch a thrown exception and provide useful messages in an alternate UI so that users are not left looking on a blank screen
- *
+ * react-axe can detect accessibility issues on the browser console once the app has fully rendered
+ *  For example: <h1>Test</h1> followed by <h3>Test</h3> is an example of accessbility issues.
  */
