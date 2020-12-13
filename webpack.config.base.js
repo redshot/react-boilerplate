@@ -62,6 +62,6 @@ module.exports = {
  * Husky allows us to ensure that our code is formatted and well-tested before committing to git
  * React strictmode is gonna give us warnings and anything that is deprecated(this might only happen in development mode)
  *  - Will warn in the console
- *
+ * DefaultErrorBoundary is a react component that will catch a thrown exception and provide useful messages in an alternate UI so that users are not left looking on a blank screen
  *
  */

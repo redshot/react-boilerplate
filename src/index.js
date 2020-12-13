@@ -2,12 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import 'core-js'
 import App from './App'
+import DefaultErrorBoundary from './DefaultErrorBoundary'
 import './styles.css'
 
 // put component into html page
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <DefaultErrorBoundary>
+      <App />
+    </DefaultErrorBoundary>
   </React.StrictMode>,
   document.getElementById('app')
 )
